@@ -3,8 +3,9 @@
 #include <string.h>
 
 int main() {
-  char *input = "#aaffaa";
-  printf("%d\n", strlen(input));
-  printf("%d\n", sizeof(input));
+  char input;
+  while(scanf("%c", input)!=EOF) {
+    printf("%d\n", input);
+  }
   return 0;
 }
