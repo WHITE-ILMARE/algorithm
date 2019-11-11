@@ -8,11 +8,18 @@
 #define BGCOLOR "\033[48;2;"
 
 char* format(char* stand, char* input);
-int htoi(char* hex);
+int midst(char bigger, char smaller);
+struct Colors htoi(char* hex);
 int calOrder(int row, int col, int p, int q, int rowc);
+struct Colors {
+  double R;
+  double G;
+  double B;
+} colors;
 
 int main() {
-  int m,n,p,q,i=0,temp;
+  int m,n,p,q,i=0;
+  struct Colors temp;
   char interVal[6];
   char *color = (char *)malloc(sizeof(char));
   char value[6];
@@ -20,7 +27,7 @@ int main() {
   scanf("%d %d", &p, &q);
   int square = p * q;
   int lineCount = m*n, blockCount = (m*n)/square;
-  int blocks[blockCount];
+  struct Colors blocks[blockCount];
   for(i;i<=lineCount;i++){
     scanf("%s", color);
     temp = htoi(format(interVal, strncpy(value, color+1, 6)));
@@ -28,10 +35,14 @@ int main() {
     int col = i % m;
     int blockorder = calOrder(row, col, p, q, m/p);
     // printf("%s is at row: %d, col: %d, blockorder: %d\n", color,row,col,blockorder);
-    blocks[blockorder]+=temp;
+    blocks[blockorder].R+=temp.R/square;
+    blocks[blockorder].G+=temp.G/square;
+    blocks[blockorder].B+=temp.B/square;
   }
   for(i=0;i<blockCount;i++){
-    blocks[i]/=square;
+    blocks[i].R=(int)blocks[i].R;
+    blocks[i].G=(int)blocks[i].G;
+    blocks[i].B=(int)blocks[i].B;
   }
   return 0;
 }
@@ -53,15 +64,22 @@ char* format(char stand[], char *input) {
   return stand;
 }
 
-int htoi(char* hex){
-  int result=0,i=0;
-  for(i;i<6;i++){
-    if(hex[i]>'9'){
-      result = 16*result+10+(hex[i]-'a');
-    }else{
-      result=16*result+(hex[i]-'0');
-    }
-  }
+struct Colors htoi(char* hex){
+  int temp=0,i=0;
+  char *single;
+  struct Colors result;
+  result.R = midst(hex[0], hex[1]);
+  result.G = midst(hex[2], hex[3]);
+  result.B = midst(hex[4], hex[5]);
+  return result;
+}
+
+int midst(char bigger, char smaller){
+  int result = 0;
+  if (smaller >'9') result += 10+(smaller-'a');
+  else result += smaller-'0';
+  if (bigger>'9') result += 16*(10+(bigger-'a'));
+  else result += 16*(bigger-'0');
   return result;
 }
 

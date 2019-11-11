@@ -3,9 +3,8 @@
 #include <string.h>
 
 int main() {
-  char input;
-  while(scanf("%c", input)!=EOF) {
-    printf("%d\n", input);
-  }
+  char esc = "2";
+  printf("%d\n", esc);
+  system("pause");
   return 0;
 }
