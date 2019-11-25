@@ -24,5 +24,5 @@ int main() {
 		}
 		iter++;	
 	}
-	printf("%d\n", result);
+	cout << result << endl;
 }
