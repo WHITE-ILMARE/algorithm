@@ -3,8 +3,8 @@
 #include <string.h>
 
 int main() {
-  char esc = "2";
-  printf("%d\n", esc);
+  char esc = '\033';
+  printf("\\x%x\n", esc+1-1);
   system("pause");
   return 0;
 }
