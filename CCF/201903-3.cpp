@@ -1,75 +1,66 @@
 #include <iostream>
+#include <stdio.h>
 #include <fstream>
 #include <iomanip>
 #include <math.h>
+#include <map>
+#include <string.h>
 
 using namespace std;
 
-void divide(string, string[]);
+map<int, char> mm;
+const char* en = "0123456789ABCDEF";
+void cacheMap();
 
 int main() {
-	int n, s, l, m, order, tempint, col, fd, sd, so, ps;
-	unsigned int result;
+	ios::sync_with_stdio(false); // 神器，从30分到100分，禁用了cin的兼容，极大提升了cin的效率 
+	int n, s, l, m, order, tempint, col, fd, sd, so, ps, maxBlock;
 	string tempstr;
-	ifstream testfile("./test.txt");
 	cin >> n >> s >> l;
-//	testfile >> n >> s >> l;
+	string data[n];
 	int a[n] = {0};
-	cin >> tempint >> tempstr;
-//	testfile >> tempint >> tempstr;
-	a[tempint] = 1;
-	col = tempstr.size()/8;
-	string data[n][col];
-	divide(tempstr, data[tempint]);
-	for (int i = 1; i < l; i++) {
+	for (int i = 0; i < l; i++) {
 		cin >> tempint >> tempstr;
-//		testfile >> tempint >> tempstr;
 		a[tempint] = 1;
-		divide(tempstr, data[tempint]);
+		data[tempint] = tempstr;
 	}
-//	for (int i = 0; i < n; i++) {
-//		for (int j = 0; j < col; j++) {
-//			cout << data[i][j] << ' ';
-//		}
-//		cout << endl;
-//	}
+	maxBlock = data[tempint].size() / 8 * (n - 1);
+	cacheMap();
 	cin >> m;
-//	testfile >> m;
 	for (int i = 0; i < m; i++) {
 		cin >> order;
-//		testfile >> order;
 		so = order / s; // 查询块在第几个条带上 
-//		cout << "stripe order=" << so << endl;
-		fd = so % n; // 查询块在第几个磁盘上 
-//		cout << "first dimension=" << fd << endl;
-		if (a[fd] == 0 && n - l >= 2) { // 查询到了缺失盘且无法还原
-			cout << '-' << endl;
+		if (order >= maxBlock || (a[fd] == 0 && n - l >= 2)) { // 查询到了缺失盘且无法还原
+			cout << "-" << endl;
 			continue; 
 		}
-//		cout << "row=" << fd << endl; // 第一个维度 
-		int stripes = (so - fd) / n; // 查询块所在的条带前面有多少个条带 
-//		cout << stripes << " stripes before target" << endl;
-		ps = floor((stripes + fd + 1 - n) / (double)n) + 1; // 查询块所在条带前面有多少个P(+1是因为算出的P从0开始计数)
-//		cout << ps << " Ps before target" << endl; 
-		sd = (stripes + ps) * s + (order % s); // 第二个维度 
-//		cout << "col=" << sd << endl;
-//		cout << "data=" << data[fd][sd] << endl;
-		result = 0; 
+		int stripes = so / (n - 1); // 查询块所在的条带前面有多少个条带 
+		fd = so % n;
+		sd = stripes * s + (order % s); // 第二个维度 
+		char result[9] = "00000000"; 
 		if (a[fd] == 0) { // 需要做异或运算 
 			for (int i = 0; i < n; i++) {
 				if (i != fd) {
-					result ^= stoul(data[i][sd], nullptr, 16);
+					for (int j=0;j<8;j++) {
+						result[j] = mm[result[j]*128+(data[i][sd*8+j])];
+					}
 				}
 			}
-		} else result = stoul(data[fd][sd], nullptr, 16);
-		cout << setw(8) << setfill('0') << hex << uppercase << result << endl;
+			cout << result;
+		} else {
+			for (int i=0;i<8;i++) {
+				int start = sd * 8;
+				cout << data[fd][start+i];	
+			}
+		}
+		cout << endl;
 	}
 }
 
-void divide(string str, string* arr) {
-	int len = str.size();
-	int times = len / 8;
-	for (int i = 0; i < times; i++) {
-		arr[i] = str.substr(8 * i, 8);
-	}
+void cacheMap() {
+	for (int i=0;i<16;i++) {
+		for (int j =0;j<16;j++) {
+			mm[en[i]*128+en[j]] = mm[en[j]*128+en[i]] = en[i^j];
+		}
+	} 
 }
