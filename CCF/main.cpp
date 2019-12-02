@@ -14,7 +14,8 @@ int main() {
 		}
 	}
 	int x,y=0;
-	while(x<n||y<n) {
+	q.push(a[0][0]);
+	while(x<n&&y<n) {
 		if (y<n-1) {
 			++y;
 			q.push(a[x][y]);
@@ -26,7 +27,7 @@ int main() {
 			++x; --y;
 			q.push(a[x][y]);
 		}
-		if (x=n-1) { // x先触及边界
+		if (x==n-1) { // x先触及边界
 			++y; 
 			q.push(a[x][y]);
 		} else {
@@ -38,7 +39,8 @@ int main() {
 			q.push(a[x][y]);
 		}
 	}
-	while(q.size() >0) {
+	int sum = n * n;
+	for (int i=0;i<sum;++i) {
 		cout << q.front() << ' ';
 		q.pop();
 	}
