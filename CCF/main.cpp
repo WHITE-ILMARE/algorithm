@@ -1,5 +1,4 @@
-#include <iostream>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -15,11 +14,15 @@ int main() {
 	}
 	int x,y=0;
 	q.push(a[0][0]);
+	if (n == 1) {
+		cout << a[0][0] << ' ' << endl;
+		return 0;
+	} 
 	while(x<n&&y<n) {
 		if (y<n-1) {
 			++y;
 			q.push(a[x][y]);
-		} else {
+		} else if(y==n-1) {
 			++x;
 			q.push(a[x][y]);
 		}
@@ -30,7 +33,7 @@ int main() {
 		if (x==n-1) { // xÏÈ´¥¼°±ß½ç
 			++y; 
 			q.push(a[x][y]);
-		} else {
+		} else if (y==0) {
 			++x;
 			q.push(a[x][y]);
 		}

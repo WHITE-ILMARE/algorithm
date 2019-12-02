@@ -10,8 +10,8 @@ LIBS     = -L"E:/dev-cpp/MinGW64/lib" -L"E:/dev-cpp/MinGW64/x86_64-w64-mingw32/l
 INCS     = -I"E:/dev-cpp/MinGW64/include" -I"E:/dev-cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"E:/dev-cpp/MinGW64/include" -I"E:/dev-cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = debugProject.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
