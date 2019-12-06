@@ -12,24 +12,20 @@ int main(){
 		if (count==0) {
 			result+=n;	
 			bef = n;
-			cout << n << ' ' << bef << ' ' << result << endl;
 		}
 		else {
 			if (n==2) {
 				if (bef==1) {
 					result+=2;	
 					bef = 2;
-					cout << n << ' ' << bef << ' ' << result << endl;
 				}
 				else {
 					bef+=2;
 					result+=bef;
-					cout << n << ' ' << bef << ' ' << result << endl;
 				}
 			} else {
 				bef = 1;
 				result+=bef;
-				cout << n << ' ' << bef << ' ' << result << endl;
 			}
 		}
 		count++;
