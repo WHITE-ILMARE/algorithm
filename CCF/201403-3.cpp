@@ -26,7 +26,16 @@ int main() {
 	// 清除缓存区中的换行符
 	cin.ignore(); 
 	for (int i=0;i<n;++i) {
+		// 清空上一次的结果
+		result.clear();
+		strs.clear();
+		//cout << "---------result.clear()----------------" << endl;
+		//for(map<string, string>::iterator it = result.begin(); it != result.end(); ++it) {
+		//	cout << it->first << '=' << it->second << ";";
+		//}
+		//cout << "---------result.clear()----------------" << endl;
 		getline(cin, s);
+		//cout << "s=" << s <<endl;
 		spos = s.find(' ');
 		// 按空格分割字符串
 		while(spos != string::npos) {
@@ -41,10 +50,18 @@ int main() {
 		// 匹配
 		for (vector<string>::iterator it = strs.begin(); it != strs.end(); ++it) {
 			flag = 0;
+			string s1 = *it;
+			if (s1[0] != '-' || s1.length() != 2) break;
 			for (vector<char>::iterator cit = p.begin(); cit != p.end(); ++cit) {
 				if ((*it)[1] == *cit) {
-					const string key = *it;
+					const string key = (*it);
 					++it;
+					if (it == strs.end()) break;
+					// cout << "insert into result, key=" << key << ", value="<<*it<<endl;
+					map<string, string>::iterator temp = result.find(key);
+					if (temp != result.end())
+						temp->second = *it;
+					else
 					result.insert(pair<string, string>(key, *it));
 					flag = 1;
 					break;	
@@ -60,8 +77,11 @@ int main() {
 			}
 			if (flag == 0) break;
 		}
+		cout << "Case " << i+1 << ": ";
 		for(map<string, string>::iterator it = result.begin(); it != result.end(); ++it) {
-			cout << it->first << '=' << it->second << ";";
+			cout << it->first << " ";
+			if (it->second != "")
+			cout << it->second << " ";
 		}
 		cout << endl;
 	}
