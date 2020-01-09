@@ -2,15 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <fstream>
 
 #define DEFAULT_COLOR "\033[0m"
 #define COLOR "\033[38;2;"
 #define BGCOLOR "\033[48;2;"
 
-char* format(char* stand, char* input);
-int midst(char bigger, char smaller);
-struct Colors htoi(char* hex);
-int calOrder(int row, int col, int p, int q, int rowc);
+char* format(char* stand, char* input); // 将色值格式化为6位
+int sumhex(char bigger, char smaller); // 求16进制两个字符的十进制值
+struct Colors htoi(char* hex); // 将16进制表示的色值转换为颜色结构体
+int calOrder(int row, int col, int p, int q, int rowc); // 计算按块划分的行、高
 struct Colors {
   double R;
   double G;
@@ -23,13 +24,17 @@ int main() {
   char interVal[6];
   char *color = (char *)malloc(sizeof(char));
   char value[6];
-  scanf("%d %d", &m, &n);
-  scanf("%d %d", &p, &q);
+  ifstream ifs;
+  ifs.open("201909-3-1.txt", ifstream::in);
+  ifs >> m >> n >> p >> q;
+//  scanf("%d %d", &m, &n);
+//  scanf("%d %d", &p, &q);
   int square = p * q;
-  int lineCount = m*n, blockCount = (m*n)/square;
+  int inputCount = m*n, blockCount = (m*n)/square;
   struct Colors blocks[blockCount];
-  for(i;i<=lineCount;i++){
-    scanf("%s", color);
+  for(i;i<=inputCount;i++){
+    ifs >> color;
+//    scanf("%s", color);
     temp = htoi(format(interVal, strncpy(value, color+1, 6)));
     int row = i / m;
     int col = i % m;
@@ -39,7 +44,7 @@ int main() {
     blocks[blockorder].G+=temp.G/square;
     blocks[blockorder].B+=temp.B/square;
   }
-  for(i=0;i<blockCount;i++){
+  for(i=0;i<blockCount;i++){ // 向0取整
     blocks[i].R=(int)blocks[i].R;
     blocks[i].G=(int)blocks[i].G;
     blocks[i].B=(int)blocks[i].B;
@@ -66,15 +71,14 @@ char* format(char stand[], char *input) {
 
 struct Colors htoi(char* hex){
   int temp=0,i=0;
-  char *single;
   struct Colors result;
-  result.R = midst(hex[0], hex[1]);
-  result.G = midst(hex[2], hex[3]);
-  result.B = midst(hex[4], hex[5]);
+  result.R = sumhex(hex[0], hex[1]);
+  result.G = sumhex(hex[2], hex[3]);
+  result.B = sumhex(hex[4], hex[5]);
   return result;
 }
 
-int midst(char bigger, char smaller){
+int sumhex(char bigger, char smaller){
   int result = 0;
   if (smaller >'9') result += 10+(smaller-'a');
   else result += smaller-'0';
