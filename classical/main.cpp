@@ -1,86 +1,39 @@
-#include <iostream>
 #include <fstream>
-#include <algorithm>
-#include <iomanip>
+#include <iostream>
 
 using namespace std;
+const int sy = 1800;
+const int sm = 1;
+const int sd = 1;
+const int sw = 1; // 1是星期2
+const int nrms[] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const int rms[] = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-struct ope {
-    int t; // 1->buy;0->sell;-1->cancel
-    double p;
-    double s;
-    bool v;
-};
+bool isR(int y) {
+    return y % 400 == 0 || (y % 4 ==0 && y % 100 != 0);
+}
 
-const int N = 5000;
-ope o[N], temp;
-
-bool cmp(ope o1, ope o2) {
-    if (o1.v != o2.v) { // 有效在前
-        return o1.v == true;
-    } else if (o1.t != o2.t) { // 买入在前
-        return o1.t > o2.t;
-    } else return o1.p > o2.p; // 价高在前
+int calR(int y) { // 计算1800至y-1年中有多少闰年
+    int result = 0, it = 1804;
+    while(it <y && isR(it)) {
+        ++result;
+        it+=4;
+    }
+    return result;
 }
 
 int main() {
-    string op; int c = 0, bc = 0, sc = 0, cancel; double p, s, rp = 0.00; long long maxsell = 0, maxbuy = 0, result = 0;
-    ifstream ifs;
-//    ifs.open("test.txt", ifstream::in);
-    while(cin >> op) {
-//    while(ifs >> op) {
-        if (op == "buy") {
-            cin >> p >> s;
-//            ifs >> p >> s;
-            temp = {1, p, s, true};
-            o[c++] = temp;
-            bc++;
-        } else if (op == "sell") {
-            cin >> p >> s;
-//            ifs >> p >> s;
-            temp = {0,p,s,true};
-            o[c++] = temp;
-            sc++;
-        } else if(op == "cancel") {
-            cin >> cancel;
-//            ifs >> cancel;
-            o[cancel-1].v = false;
-            if (o[cancel-1].t ==0) sc--;
-            else if (o[cancel-1].t==1) bc--;
-            temp = {-1,0.0,0.0,true};
-            o[c++] = temp;
-        }
+    fstream fs;
+    fs.open("test.txt", fstream::in);
+    int a, b, c, y1, y2;
+    fs >> a >> b >> c >> y1 >> y2;
+    // 计算a月1号是星期几
+    for (int y=y1;y<=y2;++y) {
+        const int r = calR(y);
+        int nr = y - 1800 - r;
+        int w = sw;
+        w = (w + (r * 366) % 7) % 7;
+        w = (w + (nr * 365) % 7) % 7;
+
     }
-    sort(o, o+c, cmp);
-
-//    cout << "------------arr------------" << endl;
-//    for (int i=0;i<c;++i) {
-//        cout << o[i].v << ','<<o[i].t<<','<<o[i].p<<','<<o[i].s<<endl;
-//    }
-//    cout << "------------arr------------" << endl;
-//    cout << "bc= "<<bc << " sc=" << sc << endl;
-
-    int realc = bc + sc;
-    for(int i=0;i<bc;++i) {
-        maxbuy = 0; maxsell = 0;
-        p = o[i].p; // 定的买入价
-        for (int bi=0;bi<=i;++bi) {
-            if (o[bi].p >= p) maxbuy += o[bi].s;
-        }
-        int si = realc-1;
-        while(si>=bc&&o[si].p<=p) {
-            maxsell += o[si].s;
-            --si;
-        }
-
-//        cout << "price=" << p << " maxsell= " << maxsell << " maxbuy= " << maxbuy << endl;
-
-        long long temp = min(maxsell, maxbuy);
-        if (temp > result) {
-            rp = p;
-            result = temp;
-        }
-    }
-    cout << fixed << setprecision(2) << rp << ' ' << result << endl;
-    return 0;
 }
