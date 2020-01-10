@@ -1,5 +1,7 @@
 #include <iostream>
+#include <fstream>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -22,33 +24,63 @@ bool cmp(ope o1, ope o2) {
 }
 
 int main() {
-    string op; int c = 0, bc = 0, sc = 0, cancel; double p, s; long double maxsell = 0, maxbuy = 0;
+    string op; int c = 0, bc = 0, sc = 0, cancel; double p, s, rp = 0.00; long long maxsell = 0, maxbuy = 0, result = 0;
+    ifstream ifs;
+//    ifs.open("test.txt", ifstream::in);
     while(cin >> op) {
+//    while(ifs >> op) {
         if (op == "buy") {
             cin >> p >> s;
+//            ifs >> p >> s;
             temp = {1, p, s, true};
             o[c++] = temp;
             bc++;
         } else if (op == "sell") {
             cin >> p >> s;
+//            ifs >> p >> s;
             temp = {0,p,s,true};
             o[c++] = temp;
             sc++;
         } else if(op == "cancel") {
             cin >> cancel;
+//            ifs >> cancel;
             o[cancel-1].v = false;
-            if (o[cancel-1].t ==0) bc--;
-            else if (o[cancel-1].t==1) sc--;
+            if (o[cancel-1].t ==0) sc--;
+            else if (o[cancel-1].t==1) bc--;
             temp = {-1,0.0,0.0,true};
             o[c++] = temp;
-        } else break;
+        }
     }
     sort(o, o+c, cmp);
+
+//    cout << "------------arr------------" << endl;
 //    for (int i=0;i<c;++i) {
 //        cout << o[i].v << ','<<o[i].t<<','<<o[i].p<<','<<o[i].s<<endl;
 //    }
+//    cout << "------------arr------------" << endl;
+//    cout << "bc= "<<bc << " sc=" << sc << endl;
+
+    int realc = bc + sc;
     for(int i=0;i<bc;++i) {
-        p = o[i].p; //
+        maxbuy = 0; maxsell = 0;
+        p = o[i].p; // 定的买入价
+        for (int bi=0;bi<=i;++bi) {
+            if (o[bi].p >= p) maxbuy += o[bi].s;
+        }
+        int si = realc-1;
+        while(si>=bc&&o[si].p<=p) {
+            maxsell += o[si].s;
+            --si;
+        }
+
+//        cout << "price=" << p << " maxsell= " << maxsell << " maxbuy= " << maxbuy << endl;
+
+        long long temp = min(maxsell, maxbuy);
+        if (temp > result) {
+            rp = p;
+            result = temp;
+        }
     }
+    cout << fixed << setprecision(2) << rp << ' ' << result << endl;
     return 0;
 }
