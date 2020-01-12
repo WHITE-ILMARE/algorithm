@@ -16,11 +16,11 @@ const int N = 5000;
 ope o[N], temp;
 
 bool cmp(ope o1, ope o2) {
-    if (o1.v != o2.v) { // ÓÐÐ§ÔÚÇ°
+    if (o1.v != o2.v) { // ï¿½ï¿½Ð§ï¿½ï¿½Ç°
         return o1.v == true;
-    } else if (o1.t != o2.t) { // ÂòÈëÔÚÇ°
+    } else if (o1.t != o2.t) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°
         return o1.t > o2.t;
-    } else return o1.p > o2.p; // ¼Û¸ßÔÚÇ°
+    } else return o1.p > o2.p; // ï¿½Û¸ï¿½ï¿½ï¿½Ç°
 }
 
 int main() {
@@ -63,7 +63,7 @@ int main() {
     int realc = bc + sc;
     for(int i=0;i<bc;++i) {
         maxbuy = 0; maxsell = 0;
-        p = o[i].p; // ¶¨µÄÂòÈë¼Û
+        p = o[i].p; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int bi=0;bi<=i;++bi) {
             if (o[bi].p >= p) maxbuy += o[bi].s;
         }
