@@ -9,41 +9,41 @@ using namespace std;
 
 string h[100];
 map<string, string> va;
-vector<int> poses;
 
 int main () {
-    ifstream ifs("test.txt");
+//    ifstream ifs("test.txt");
     int n, v; string name, val;
-    ifs >> n >> v;
-    ifs.ignore();
+//    ifs >> n >> v;
+    cin >> n >> v;
+//	ifs.ignore();
+	cin.ignore();
 //    cout <<"n="<<n<<" v="<<v<<endl;
-    regex reg("\\{\\{ (\\D\\w{0,15}) \\}\\}");
     for (int l=0;l<n;++l) {
-        getline(ifs, h[l]);
-    }
+//        getline(ifs, h[l]);
+    	getline(cin, h[l]);
+	}
     for (int l=0;l<v;++l) {
         string nv;
-        getline(ifs, nv);
+//        getline(ifs, nv);
+        getline(cin, nv);
         int pos = nv.find(" ");
         int len = nv.length();
         name = nv.substr(0, pos);
-        val = nv.substr(pos+1, len - pos -2);
+        val = nv.substr(pos+2, len - pos -3);
 //        cout << name << "=" <<val<<endl;
         string t = "{{ "+name+" }}";
-        len = val.length();
-        string value = val.substr(1, len-1);
-        va[t] = value;
+        va[t] = val;
     }
+	for (int l=0;l<n;++l) { // replace per line
+		int start = h[l].find("{{ ");
+		while(start != string::npos) {
+			int end = h[l].find(" }}");
+			string key = h[l].substr(start, end-start+3);
+			h[l].replace(start, end-start+3, va[key]);
+			start = h[l].find("{{ ");
+		}
+	}
     for (int i=0;i<n;++i) {
-        smatch m;
-        regex_match(h[i], m, reg);
-        cout << "h[" << i<<"]="<<h[i] <<endl;
-        cout << "m.size()=" << m.size() <<endl;
-        for (int l=0;l<m.size();++l) {
-            cout << m.str(l) << endl;
-        }
+        cout << h[i] << endl;
     }
-//    for (int i=0;i<n;++i) {
-//        cout << h[i] << endl;
-//    }
 }
