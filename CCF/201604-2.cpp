@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -6,34 +7,54 @@ struct coor {
 	int x, y;
 };
 
-char c[15][15];
+char c[15][10];
 char nc[4][4];
 coor shape[4];
 
-bool isborder(int o, int n) {
-	if (o >= 11) return true;
+bool isborder(int o) {
 	for (int i=0;i<4;++i) {
-		int x = coor[i].x; int y = coor[i].y;
-		if ()
+		if(shape[i].x+o+1 >= 15 || c[shape[i].x+o+1][shape[i].y] != '0') return true;
 	}
+	return false; 
 }
 
 int main() {
 	int count = 0;
+	ifstream ifs("201604-2.txt");
 	for (int i =0;i<15;++i)
-		for (int j=0;j<15;++j)
+		for (int j=0;j<10;++j)
+//			ifs >> c[i][j];
 			cin >> c[i][j];
+//	cout << "----------------input c----------------"<<endl;
+//	for (int i=0;i<15;++i) {
+//		for (int j=0;j<10;++j)
+//			cout << c[i][j] << ' ';
+//		cout << endl;
+//	}
+//	cout << "----------------input c----------------"<<endl;
 	for (int i=0;i<4;++i)
 		for (int j=0;j<4;++j) {
-			cin >> n[i][j];
-			if (n[i][j] != '0') {
+//			ifs >> nc[i][j];
+			cin >> nc[i][j];
+			if (nc[i][j] != '0') {
 				shape[count].x = i;
 				shape[count++].y = j;
 			}
 		}
+//	for (int i=0;i<4;++i) {
+//		cout << "shape["<<i<<"] = ("<<shape[i].x <<","<<shape[i].y<<")"<<endl;
+//	}
 	int n;
 	cin >> n;
-	for (int i=0;i<4;++i) coor[i].y += n;
+//	ifs >> n;
+	for (int i=0;i<4;++i) shape[i].y += (n-1);
 	int offset = 0;
-	while(!isborder(offset, n))
+	while(!isborder(offset)) ++offset;
+	for (int i=0;i<4;++i) c[shape[i].x+offset][shape[i].y] = '1';
+	for (int i=0;i<15;++i) {
+		for (int j=0;j<10;++j) {
+			cout << c[i][j] << ' ';	
+		}
+		cout << endl;
+	}
 }
