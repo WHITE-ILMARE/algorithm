@@ -1,84 +1,65 @@
 #include <iostream>
+#include <vector>
 #include <stack>
 
 using namespace std;
 
-struct coor {
-    int x, y;
-};
-char c[101][101];
-stack<coor> cs;
+stack<string> result;
 
-void lineOnce(char c[][101], int x, int y, char ch) {
-    if ((c[x][y] == '-' && ch == '|') || (c[x][y] == '|' && ch=='-') || c[x][y] == '+') c[x][y] = '+';
-    else c[x][y] = ch;
-}
-
-bool isborder(char c[][101], int x, int y, int w, int h, char ch) {
-    return x == -1 || y == -1 || x == w || y == h || c[x][y] == '-' || c[x][y] == '|' || c[x][y] == '+' || c[x][y] == ch;
+vector<string> divide(string s) { // divide string with '/', return the result array
+    int start = 0, end = s.find("/", start + 1);
+    vector<string> result;
+    while (start != string::npos) {
+//		cout << "start = "<<start<<",end = "<<end<<endl;
+        if (end == string::npos) { // at the end of process
+            if (s[start] == '/')
+                result.push_back(s.substr(start + 1));
+            else result.push_back(s.substr(start));
+            break;
+        } else {
+            if (s[start] == '/') result.push_back(s.substr(start + 1, end - start - 1));
+            else result.push_back(s.substr(start, end - start)); // include start, length+1
+//			cout << "in else, start = " << start << endl;
+        }
+        start = end;
+        end = s.find("/", start + 1);
+    }
+    return result;
 }
 
 int main() {
-    for (int k=0;k<101;++k)
-        for (int p=0;p<101;++p)
-            c[k][p] = '.';
-    int n, m, q, op, x1, y1, x2, y2, x, y; char ch;
-    cin >> m >> n >> q;
-    for (int i=0;i<q;++i) {
-//		for (int r=n-1;r>=0;--r) {
-//			for (int v=0;v<m;++v) {
-//				cout << c[v][r] << ' ';
-//			}
-//			cout << endl;
-//		}
-        cin >> op;
-        if (op == 0) {
-            cin >> x1 >> y1 >> x2 >> y2;
-//			cout << "("<<x1<<","<<y1<<"),("<<x2<<","<<y2<<")"<<endl;
-            if (x1 == x2) {
-                if (y1 < y2)
-                    for (int t = y1;t<=y2;++t) lineOnce(c, x1, t, '|');
-                else
-                    for(int t=y2;t<=y1;++t) lineOnce(c, x1, t, '|');
-            } else {
-                if (x1<x2) {
-                    for (int t=x1;t<=x2;++t) lineOnce(c, t, y1, '-');
-                }
-                else
-                    for (int t=x2;t<=x1;++t) lineOnce(c, t, y1, '-');
-            }
-        } else {
-            cin >> x >> y >> ch;
-            coor tc{x, y};
-            cs.push(tc);
-            while(!cs.empty()) {
-                coor tc = cs.top();
-//				cout << "top = ("<<tc.x<<','<<tc.y<<"), size=("<<cs.size()<<")"<<endl;
-                c[tc.x][tc.y] = ch;
-                cs.pop();
-                if (!isborder(c, tc.x-1, tc.y, m, n, ch)) {
-//					cout << "("<<tc.x-1<<","<<tc.y<<") is not border" << endl;
-                    coor temp{tc.x-1, tc.y}; cs.push(temp);
-                }
-                if (!isborder(c, tc.x, tc.y+1, m, n, ch)) {
-//					cout << "("<<tc.x<<","<<tc.y+1<<") is not border" << endl;
-                    coor temp{tc.x, tc.y+1}; cs.push(temp);
-                }
-                if (!isborder(c, tc.x+1, tc.y, m, n, ch)) {
-//					cout << "("<<tc.x+1<<","<<tc.y<<") is not border" << endl;
-                    coor temp{tc.x+1, tc.y}; cs.push(temp);
-                }
-                if (!isborder(c, tc.x, tc.y-1, m, n, ch)) {
-//					cout << "("<<tc.x<<","<<tc.y-1<<") is not border" << endl;
-                    coor temp{tc.x, tc.y-1}; cs.push(temp);
-                }
-            }
+    string pwd, i;
+    int n;
+    cin >> n;
+    cin >> pwd;
+    vector<string> init = divide(pwd); // (.),(..),(),(dir/file)
+    for (int k = 0; k < n; ++k) {
+        cin >> i;
+        vector<string> r = divide(i);
+        if (i[0] != '/')
+            for (vector<string>::iterator it = init.begin(); it != init.end(); ++it)
+                result.push(*it);
+//        for(vector<string>::iterator it=r.begin();it!=r.end();++it) cout << *it << ',';
+//        cout << endl;
+        for (vector<string>::iterator it = r.begin(); it != r.end(); ++it) {
+//            cout << "deal with: " << *it << endl;
+            if ((*it).compare(".") == 0 || (*it).compare("") == 0) {
+                continue;
+            } else if ((*it).compare("..") == 0) {
+                if (!result.empty())
+                    result.pop();
+            } else result.push((*it));
         }
-    }
-    for (int j=n-1;j>=0;--j) {
-        for (int i=0;i<m;++i) {
-            cout << c[i][j];
+        string res;
+        if (result.empty()) {
+            cout << "/" << endl;
+            continue;
         }
-        cout << endl;
+        while (!result.empty()) {
+            res = "/" + result.top() + res;
+            result.pop();
+        }
+        cout << res << endl;
     }
+    return 0;
 }

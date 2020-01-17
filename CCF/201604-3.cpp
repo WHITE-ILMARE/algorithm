@@ -1,12 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-#include <queue>
 
 using namespace std;
 
-stack<string> path_s;
-queue<string> path_q;
+stack<string> result;
 
 vector<string> divide(string s) { // divide string with '/', return the result array
 	int start = 0, end = s.find("/", start+1);
@@ -34,15 +32,21 @@ int main() {
 	cin >> pwd;
 	vector<string> init = divide(pwd); // (.),(..),(),(dir/file)
 	cin >> i;
-	if (i[0] == '/') {
-		
+	if (i[0] != '/')
+	    for (vector<string>::iterator it=init.begin();it!=init.end();++it)
+	        result.push(*it);
 	}
-	else flag = 0; // relative path
 	for (vector<string>::iterator it=r.begin();it!=r.end();++it) {
 		cout <<"deal with: " *it << endl;
-		if (*it==".") {
-			
-		}
+		if ((*it).compare(".")==0||(*it).compare("")==0) {
+			continue;
+		} else if((*it).compare("..")==0) {
+		    result.pop();
+		} else result.push((*it));
+	}
+	string res;
+	while(!result.empty()) {
+
 	}
 	return 0;
 } 
