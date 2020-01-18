@@ -1,65 +1,108 @@
 #include <iostream>
+#include <map>
 #include <vector>
-#include <stack>
+#include <string>
+#include <fstream>
 
 using namespace std;
 
-stack<string> result;
-
-vector<string> divide(string s) { // divide string with '/', return the result array
-    int start = 0, end = s.find("/", start + 1);
-    vector<string> result;
-    while (start != string::npos) {
-//		cout << "start = "<<start<<",end = "<<end<<endl;
-        if (end == string::npos) { // at the end of process
-            if (s[start] == '/')
-                result.push_back(s.substr(start + 1));
-            else result.push_back(s.substr(start));
-            break;
-        } else {
-            if (s[start] == '/') result.push_back(s.substr(start + 1, end - start - 1));
-            else result.push_back(s.substr(start, end - start)); // include start, length+1
-//			cout << "in else, start = " << start << endl;
-        }
-        start = end;
-        end = s.find("/", start + 1);
-    }
-    return result;
-}
+struct auth {
+    string name;
+    int level;
+};
+struct role {
+    string name;
+    vector<auth> auths;
+};
+struct user {
+    string name;
+    map<string, int> auths;
+};
+//int stoi(string n) {
+//    int len = n.length(); int result =0;
+//    for (int i=0;i<len;++i) result = 10*result+n[i];
+//    return result;
+//}
 
 int main() {
-    string pwd, i;
-    int n;
-    cin >> n;
-    cin >> pwd;
-    vector<string> init = divide(pwd); // (.),(..),(),(dir/file)
-    for (int k = 0; k < n; ++k) {
-        cin >> i;
-        vector<string> r = divide(i);
-        if (i[0] != '/')
-            for (vector<string>::iterator it = init.begin(); it != init.end(); ++it)
-                result.push(*it);
-//        for(vector<string>::iterator it=r.begin();it!=r.end();++it) cout << *it << ',';
+    int p, r, u, l, q;
+//    cintream cin("test.txt");
+    string name, a;
+    cin >> p;
+    for (int i = 0; i < p; ++i) cin >> name;
+    cin >> r;
+    role roles[r];
+    for (int i = 0; i < r; ++i) {
+        cin >> name;
+        roles[i].name = name;
+        cin >> l;
+        for (int j = 0; j < l; ++j) {
+            cin >> a;
+            int pos = a.find(":");
+            string ta;
+            int level;
+            if (pos != string::npos) {
+                ta = a.substr(0, pos);
+                level = stoi(a.substr(pos + 1));
+            } else {
+                ta = a;
+                level = -1;
+            }
+            auth tt{ta, level};
+            roles[i].auths.push_back(tt);
+        }
+    }
+    cin >> u;
+    user users[u];
+    for (int i = 0; i < u; ++i) {
+        cin >> name;
+        users[i].name = name;
+        cin >> l;
+        for (int j = 0; j < l; ++j) {
+            cin >> a;
+            for (int k = 0; k < r; ++k) {
+                if (roles[k].name == a) {
+                    vector<auth> tt = roles[k].auths;
+                    for (vector<auth>::iterator it = tt.begin(); it != tt.end(); ++it) {
+                        if (users[i].auths[(*it).name] == 0 || users[i].auths[(*it).name] < (*it).level+1) {
+                            if ((*it).level != -1) users[i].auths[(*it).name] = (*it).level+1;
+                            else users[i].auths[(*it).name] = (*it).level;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+    }
+//    for (int i = 0; i < u; ++i) {
+//        cout << users[i].name << "|";
+//        for (map<string, int>::iterator it = users[i].auths.begin(); it != users[i].auths.end(); ++it) {
+//            cout << it->first << "(" << it->second << ")";
+//        }
 //        cout << endl;
-        for (vector<string>::iterator it = r.begin(); it != r.end(); ++it) {
-//            cout << "deal with: " << *it << endl;
-            if ((*it).compare(".") == 0 || (*it).compare("") == 0) {
-                continue;
-            } else if ((*it).compare("..") == 0) {
-                if (!result.empty())
-                    result.pop();
-            } else result.push((*it));
+//    }
+    cin >> q;
+    for(int i=0;i<q;++i) {
+        cin >> name >> a;
+        user us; map<string, int>au = us.auths;
+        for (int k=0;k<u;++k) {
+            if (users[k].name == name) {
+                us = users[k];
+                break;
+            }
         }
-        string res;
-        if (result.empty()) {
-            cout << "/" << endl;
-            continue;
+        int pos = a.find(":");
+        if (pos == string::npos) {
+//            cout << "pos="<<pos <<",us.auths["<<a<<"]="<<us.auths[a]<<endl;
+            if (us.auths[a]==-1) cout << "true" << endl;
+            else if (us.auths[a]>0) cout << us.auths[a]-1 << endl;
+            else cout << "false" << endl;
+        } else {
+            string qname=a.substr(0,pos);
+            int ql = stoi(a.substr(pos+1));
+            if (us.auths[qname]>0 && us.auths[qname]>ql) cout << "true" << endl;
+            else cout << "false" << endl;
         }
-        while (!result.empty()) {
-            res = "/" + result.top() + res;
-            result.pop();
-        }
-        cout << res << endl;
     }
     return 0;
 }
