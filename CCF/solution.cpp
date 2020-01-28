@@ -1,35 +1,77 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+ 
 using namespace std;
-int main(){
-    int type[128]={0};//1表示无参数选项，2表示有参数选项
-    string s,t;
-    cin>>s;
-    for(int i=0;i<s.size();++i)
-        if(s[i+1]==':')//有参数选项
-            type[s[i++]]=2;//置type为2
-        else//无参数选项
-            type[s[i]]=1;//置type为1
-    int n;
-    scanf("%d%*c",&n);
-    for(int ii=1;ii<=n;++ii){
-        getline(cin,s);
-        stringstream ss(s);//用stringstream来分割字符串
-        map<char,string>ans;//存储最终结果
-        ss>>s;//命令行工具名
-        while(ss>>s){//读取每个命令行选项
-            if(s.size()==2&&s[0]=='-'&&type[s[1]]==1){//是无参数选项
-		// printf("option without param= %c\n", s[1]);
-                ans[s[1]]="";//存储到ans中，置值为空字符串
-            }else if(s.size()==2&&s[0]=='-'&&type[s[1]]==2&&ss>>t){//有参数选项且参数为t
-		// printf("option= %c , value= %s\n", s[1], t);
-                ans[s[1]]=t;//存储到ans中，置值为t
-            }else//其他情况，直接跳出循环
-                break;
-        }
-        printf("Case %d:",ii);//输出
-        for(auto&j:ans)
-            printf(" -%c%s",j.first,(j.second=="")?"":(" "+j.second).c_str());
-        puts("");
+ 
+string line, text;
+ 
+// ���䴦��
+void solve()
+{
+    // �����»��ߣ���ǩ<em></em>
+    size_t leftp = text.find("_");
+    while(leftp != string::npos) {
+        text.replace(leftp, 1, "<em>");
+        size_t rightp = text.find("_", leftp);
+        text.replace(rightp, 1, "</em>");
+        leftp = text.find("_", rightp);
     }
+ 
+    // ����������
+    leftp = text.find("[");
+    while(leftp != string::npos) {
+        size_t rightp = text.find("]", leftp);
+        size_t leftp2 = text.find("(", rightp);
+        size_t rightp2 = text.find(")", leftp2);
+        string tmp = text.substr(leftp + 1, rightp - leftp - 1);
+        string tmp2 = text.substr(leftp2 + 1, rightp2 - leftp2 - 1);
+        text.replace(text.begin() + leftp, text.begin()+rightp2 + 1, "<a href=\"" + tmp2 + "\">" + tmp + "</a>");
+        leftp = text.find("[", rightp2);
+    }
+ 
+    if(text[0] == '#') {
+        // ����#����ǩ<h></h>
+        int i = 0;
+        while(text[i] == '#') i++;
+        text = "<h" + string(1, '0' + i) + ">" + text.substr(i + 1);
+        text.insert(text.size() - 1, "</h" + string(1, '0' + i) + ">");
+    } else if(text[0] == '*') {
+        // ����*����ǩ<ul><li></li>......</ul>
+        text.insert(0, "<ul>\n");
+        text.insert(text.size(), "</ul>\n");
+        size_t leftp = text.find("*");
+        while(leftp != string::npos) {
+            size_t rightp = text.find("\n", leftp);
+            text.insert(rightp, "</li>");
+            text.replace(leftp, 2, "<li>");
+            leftp = text.find("*", rightp);
+        }
+    } else {
+            // �������䣺<p></p>
+            text = "<p>" + text.substr(0, text.size() - 1) + "</p>\n";
+    }
+ 
+    cout << text;
+    text = "";
+}
+ 
+int main()
+{
+    bool flag = false;
+ 
+ifstream ifs("201703-3(input).txt");
+    getline(ifs, line);
+    for(; ;) {
+        if(line.size() > 0)
+            text += line + "\n";
+        else if(line.size() == 0 && text.size() > 0)
+            solve();
+ 
+        if(flag) break;
+        if(!getline(ifs, line)) {
+            flag = true;
+            line = "";
+        }
+    }
+ 
     return 0;
 }
