@@ -1,6 +1,6 @@
 /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/classical.dir
-/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/KMP.dir
+/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/correct.dir
 /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/testreg2.dir
-/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/testreg.dir

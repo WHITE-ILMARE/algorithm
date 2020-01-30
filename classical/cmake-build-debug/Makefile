@@ -137,6 +137,19 @@ KMP/fast:
 .PHONY : KMP/fast
 
 #=============================================================================
+# Target rules for targets named correct
+
+# Build rule for target.
+correct: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 correct
+.PHONY : correct
+
+# fast build rule for target.
+correct/fast:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/build
+.PHONY : correct/fast
+
+#=============================================================================
 # Target rules for targets named testreg2
 
 # Build rule for target.
@@ -148,19 +161,6 @@ testreg2: cmake_check_build_system
 testreg2/fast:
 	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/build
 .PHONY : testreg2/fast
-
-#=============================================================================
-# Target rules for targets named testreg
-
-# Build rule for target.
-testreg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testreg
-.PHONY : testreg
-
-# fast build rule for target.
-testreg/fast:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/build
-.PHONY : testreg/fast
 
 KMP.o: KMP.cpp.o
 
@@ -189,6 +189,33 @@ KMP.cpp.s:
 	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/KMP.cpp.s
 .PHONY : KMP.cpp.s
 
+correct.o: correct.cpp.o
+
+.PHONY : correct.o
+
+# target to build an object file
+correct.cpp.o:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/correct.cpp.o
+.PHONY : correct.cpp.o
+
+correct.i: correct.cpp.i
+
+.PHONY : correct.i
+
+# target to preprocess a source file
+correct.cpp.i:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/correct.cpp.i
+.PHONY : correct.cpp.i
+
+correct.s: correct.cpp.s
+
+.PHONY : correct.s
+
+# target to generate assembly for a file
+correct.cpp.s:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/correct.cpp.s
+.PHONY : correct.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -215,33 +242,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-test-reg.o: test-reg.cpp.o
-
-.PHONY : test-reg.o
-
-# target to build an object file
-test-reg.cpp.o:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/test-reg.cpp.o
-.PHONY : test-reg.cpp.o
-
-test-reg.i: test-reg.cpp.i
-
-.PHONY : test-reg.i
-
-# target to preprocess a source file
-test-reg.cpp.i:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/test-reg.cpp.i
-.PHONY : test-reg.cpp.i
-
-test-reg.s: test-reg.cpp.s
-
-.PHONY : test-reg.s
-
-# target to generate assembly for a file
-test-reg.cpp.s:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/test-reg.cpp.s
-.PHONY : test-reg.cpp.s
 
 test-reg2.o: test-reg2.cpp.o
 
@@ -278,19 +278,19 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... classical"
-	@echo "... edit_cache"
 	@echo "... KMP"
+	@echo "... edit_cache"
+	@echo "... correct"
 	@echo "... testreg2"
-	@echo "... testreg"
 	@echo "... KMP.o"
 	@echo "... KMP.i"
 	@echo "... KMP.s"
+	@echo "... correct.o"
+	@echo "... correct.i"
+	@echo "... correct.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... test-reg.o"
-	@echo "... test-reg.i"
-	@echo "... test-reg.s"
 	@echo "... test-reg2.o"
 	@echo "... test-reg2.i"
 	@echo "... test-reg2.s"

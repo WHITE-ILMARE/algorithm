@@ -54,6 +54,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/classical.dir/DependInfo.cmake"
   "CMakeFiles/KMP.dir/DependInfo.cmake"
+  "CMakeFiles/correct.dir/DependInfo.cmake"
   "CMakeFiles/testreg2.dir/DependInfo.cmake"
-  "CMakeFiles/testreg.dir/DependInfo.cmake"
   )

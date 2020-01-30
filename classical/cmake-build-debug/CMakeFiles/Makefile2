@@ -55,16 +55,16 @@ CMAKE_BINARY_DIR = /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-
 # The main recursive "all" target.
 all: CMakeFiles/classical.dir/all
 all: CMakeFiles/KMP.dir/all
+all: CMakeFiles/correct.dir/all
 all: CMakeFiles/testreg2.dir/all
-all: CMakeFiles/testreg.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/classical.dir/clean
 clean: CMakeFiles/KMP.dir/clean
+clean: CMakeFiles/correct.dir/clean
 clean: CMakeFiles/testreg2.dir/clean
-clean: CMakeFiles/testreg.dir/clean
 
 .PHONY : clean
 
@@ -128,6 +128,33 @@ CMakeFiles/KMP.dir/clean:
 .PHONY : CMakeFiles/KMP.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/correct.dir
+
+# All Build rule for target.
+CMakeFiles/correct.dir/all:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/depend
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target correct"
+.PHONY : CMakeFiles/correct.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/correct.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/correct.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/correct.dir/rule
+
+# Convenience name for target.
+correct: CMakeFiles/correct.dir/rule
+
+.PHONY : correct
+
+# clean rule for target.
+CMakeFiles/correct.dir/clean:
+	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/clean
+.PHONY : CMakeFiles/correct.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/testreg2.dir
 
 # All Build rule for target.
@@ -153,33 +180,6 @@ testreg2: CMakeFiles/testreg2.dir/rule
 CMakeFiles/testreg2.dir/clean:
 	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/clean
 .PHONY : CMakeFiles/testreg2.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/testreg.dir
-
-# All Build rule for target.
-CMakeFiles/testreg.dir/all:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/depend
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target testreg"
-.PHONY : CMakeFiles/testreg.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/testreg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testreg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/testreg.dir/rule
-
-# Convenience name for target.
-testreg: CMakeFiles/testreg.dir/rule
-
-.PHONY : testreg
-
-# clean rule for target.
-CMakeFiles/testreg.dir/clean:
-	$(MAKE) -f CMakeFiles/testreg.dir/build.make CMakeFiles/testreg.dir/clean
-.PHONY : CMakeFiles/testreg.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

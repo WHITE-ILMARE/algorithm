@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhangzheyuan/projects/algorithm/classical/main.cpp
+/Users/zhangzheyuan/projects/algorithm/classical/correct.cpp
 iostream
+-
+cstring
 -
 

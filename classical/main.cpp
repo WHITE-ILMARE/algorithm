@@ -1,37 +1,35 @@
 #include <iostream>
-#include <string>
-#include <fstream>
 
 using namespace std;
 
-int main () {
-    ifstream ifs("201703-3(input).txt");
-    string line, result; int in_list = 0, pos, start;
-    while(getline(ifs, line)) {
-        int len = line.length();
-        if (len == 0) // empty line
-            continue;
-        if (line[0] == '#') { // title
-            pos = line.find(' '); start = -1;
-            for (int i=pos;i<len;++i)
-                if (line[i] != ' ' && line[i] != '#') {
-                    start = i;
-                    break;
-                }
-            result.append("<h"+to_string(pos)+">"+line.substr(start)+"</h"+to_string(pos)+"/>\n");
-        }
-        else if (line[0] == '*') { // unordered list
-            pos = line.find(' '); start = -1;
-            for (int i=pos;i<len;++i)
-                if (line[i] != ' ') {
-                    start = i;
-                    break;
-                }
-            result.append("<ul><li>"+line.substr(start)+"</li>n");
-            while(getline(ifs, line)) {
+const int MOD = 1000000007;
 
-            }
-        }
-        cout << result;
+int main () {
+    int n;
+    cin >> n;
+    // status[i][j]：在填写第i位时保持第j种状态的所有可能数字的个数
+    /**
+     * (0): 2
+     * (1): 0,2
+     * (2): 2,3
+     * (3): 0,1,2
+     * (4): 0,2,3
+     * (5): 0,1,2,3
+     */
+    long long status[n+1][6];
+    for (int i=0;i<6;++i) {
+        status[0][i] = 0;
+        status[1][i] = 0;
     }
+    status[1][0] = 1;
+    for (int i=1;i<n+1;++i) {
+        status[i][0] = 1;
+        status[i][1] = (status[i-1][0] + 2 * status[i-1][1]) % MOD;
+        status[i][2] = (status[i-1][0] + status[i-1][2]) % MOD;
+        status[i][3] = (status[i-1][1] + 2 * status[i-1][3]) % MOD;
+        status[i][4] = (status[i-1][1] + status[i-1][2] + 2 * status[i-1][4]) % MOD;
+        status[i][5] = (status[i-1][3] + status[i-1][4] + 2 * status[i-1][5]) % MOD;
+    }
+    cout << status[n][5] << endl;
+    return 0;
 }
