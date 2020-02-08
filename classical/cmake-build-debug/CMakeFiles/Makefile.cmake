@@ -52,8 +52,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/classical.dir/DependInfo.cmake"
-  "CMakeFiles/KMP.dir/DependInfo.cmake"
+  "CMakeFiles/dijkstra.dir/DependInfo.cmake"
   "CMakeFiles/correct.dir/DependInfo.cmake"
-  "CMakeFiles/testreg2.dir/DependInfo.cmake"
+  "CMakeFiles/bfs-map.dir/DependInfo.cmake"
+  "CMakeFiles/KMP.dir/DependInfo.cmake"
+  "CMakeFiles/classical.dir/DependInfo.cmake"
   )

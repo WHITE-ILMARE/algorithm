@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/testreg2.dir/dijkstra.cpp.o"
   "CMakeFiles/testreg2.dir/test-reg2.cpp.o"
   "testreg2"
   "testreg2.pdb"

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhangzheyuan/projects/algorithm/classical/correct.cpp" "/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/correct.dir/correct.cpp.o"
+  "/Users/zhangzheyuan/projects/github/algorithm/classical/correct.cpp" "/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/correct.dir/correct.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

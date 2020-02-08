@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhangzheyuan/projects/github/algorithm/classical/main.cpp" "/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/classical.dir/main.cpp.o"
+  "/Users/zhangzheyuan/projects/github/algorithm/classical/dijkstra.cpp" "/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/dijkstra.dir/dijkstra.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

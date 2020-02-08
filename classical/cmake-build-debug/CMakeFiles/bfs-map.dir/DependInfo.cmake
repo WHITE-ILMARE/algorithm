@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhangzheyuan/projects/algorithm/classical/test-reg.cpp" "/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/testreg.dir/test-reg.cpp.o"
+  "/Users/zhangzheyuan/projects/github/algorithm/classical/bfs-map.cpp" "/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/bfs-map.dir/bfs-map.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

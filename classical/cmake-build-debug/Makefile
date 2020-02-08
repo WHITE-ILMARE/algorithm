@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhangzheyuan/projects/algorithm/classical
+CMAKE_SOURCE_DIR = /Users/zhangzheyuan/projects/github/algorithm/classical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named classical
+# Target rules for targets named dijkstra
 
 # Build rule for target.
-classical: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 classical
-.PHONY : classical
+dijkstra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dijkstra
+.PHONY : dijkstra
 
 # fast build rule for target.
-classical/fast:
-	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/build
-.PHONY : classical/fast
-
-#=============================================================================
-# Target rules for targets named KMP
-
-# Build rule for target.
-KMP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 KMP
-.PHONY : KMP
-
-# fast build rule for target.
-KMP/fast:
-	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/build
-.PHONY : KMP/fast
+dijkstra/fast:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/build
+.PHONY : dijkstra/fast
 
 #=============================================================================
 # Target rules for targets named correct
@@ -150,17 +137,43 @@ correct/fast:
 .PHONY : correct/fast
 
 #=============================================================================
-# Target rules for targets named testreg2
+# Target rules for targets named bfs-map
 
 # Build rule for target.
-testreg2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testreg2
-.PHONY : testreg2
+bfs-map: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bfs-map
+.PHONY : bfs-map
 
 # fast build rule for target.
-testreg2/fast:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/build
-.PHONY : testreg2/fast
+bfs-map/fast:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/build
+.PHONY : bfs-map/fast
+
+#=============================================================================
+# Target rules for targets named KMP
+
+# Build rule for target.
+KMP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KMP
+.PHONY : KMP
+
+# fast build rule for target.
+KMP/fast:
+	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/build
+.PHONY : KMP/fast
+
+#=============================================================================
+# Target rules for targets named classical
+
+# Build rule for target.
+classical: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 classical
+.PHONY : classical
+
+# fast build rule for target.
+classical/fast:
+	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/build
+.PHONY : classical/fast
 
 KMP.o: KMP.cpp.o
 
@@ -189,6 +202,33 @@ KMP.cpp.s:
 	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/KMP.cpp.s
 .PHONY : KMP.cpp.s
 
+bfs-map.o: bfs-map.cpp.o
+
+.PHONY : bfs-map.o
+
+# target to build an object file
+bfs-map.cpp.o:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/bfs-map.cpp.o
+.PHONY : bfs-map.cpp.o
+
+bfs-map.i: bfs-map.cpp.i
+
+.PHONY : bfs-map.i
+
+# target to preprocess a source file
+bfs-map.cpp.i:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/bfs-map.cpp.i
+.PHONY : bfs-map.cpp.i
+
+bfs-map.s: bfs-map.cpp.s
+
+.PHONY : bfs-map.s
+
+# target to generate assembly for a file
+bfs-map.cpp.s:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/bfs-map.cpp.s
+.PHONY : bfs-map.cpp.s
+
 correct.o: correct.cpp.o
 
 .PHONY : correct.o
@@ -215,6 +255,33 @@ correct.s: correct.cpp.s
 correct.cpp.s:
 	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/correct.cpp.s
 .PHONY : correct.cpp.s
+
+dijkstra.o: dijkstra.cpp.o
+
+.PHONY : dijkstra.o
+
+# target to build an object file
+dijkstra.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/dijkstra.cpp.o
+.PHONY : dijkstra.cpp.o
+
+dijkstra.i: dijkstra.cpp.i
+
+.PHONY : dijkstra.i
+
+# target to preprocess a source file
+dijkstra.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/dijkstra.cpp.i
+.PHONY : dijkstra.cpp.i
+
+dijkstra.s: dijkstra.cpp.s
+
+.PHONY : dijkstra.s
+
+# target to generate assembly for a file
+dijkstra.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/dijkstra.cpp.s
+.PHONY : dijkstra.cpp.s
 
 main.o: main.cpp.o
 
@@ -243,33 +310,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test-reg2.o: test-reg2.cpp.o
-
-.PHONY : test-reg2.o
-
-# target to build an object file
-test-reg2.cpp.o:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/test-reg2.cpp.o
-.PHONY : test-reg2.cpp.o
-
-test-reg2.i: test-reg2.cpp.i
-
-.PHONY : test-reg2.i
-
-# target to preprocess a source file
-test-reg2.cpp.i:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/test-reg2.cpp.i
-.PHONY : test-reg2.cpp.i
-
-test-reg2.s: test-reg2.cpp.s
-
-.PHONY : test-reg2.s
-
-# target to generate assembly for a file
-test-reg2.cpp.s:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/test-reg2.cpp.s
-.PHONY : test-reg2.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -277,23 +317,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... classical"
-	@echo "... KMP"
-	@echo "... edit_cache"
+	@echo "... dijkstra"
 	@echo "... correct"
-	@echo "... testreg2"
+	@echo "... bfs-map"
+	@echo "... edit_cache"
+	@echo "... KMP"
+	@echo "... classical"
 	@echo "... KMP.o"
 	@echo "... KMP.i"
 	@echo "... KMP.s"
+	@echo "... bfs-map.o"
+	@echo "... bfs-map.i"
+	@echo "... bfs-map.s"
 	@echo "... correct.o"
 	@echo "... correct.i"
 	@echo "... correct.s"
+	@echo "... dijkstra.o"
+	@echo "... dijkstra.i"
+	@echo "... dijkstra.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... test-reg2.o"
-	@echo "... test-reg2.i"
-	@echo "... test-reg2.s"
 .PHONY : help
 
 

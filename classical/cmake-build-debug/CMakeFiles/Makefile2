@@ -44,27 +44,29 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhangzheyuan/projects/algorithm/classical
+CMAKE_SOURCE_DIR = /Users/zhangzheyuan/projects/github/algorithm/classical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/classical.dir/all
-all: CMakeFiles/KMP.dir/all
+all: CMakeFiles/dijkstra.dir/all
 all: CMakeFiles/correct.dir/all
-all: CMakeFiles/testreg2.dir/all
+all: CMakeFiles/bfs-map.dir/all
+all: CMakeFiles/KMP.dir/all
+all: CMakeFiles/classical.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/classical.dir/clean
-clean: CMakeFiles/KMP.dir/clean
+clean: CMakeFiles/dijkstra.dir/clean
 clean: CMakeFiles/correct.dir/clean
-clean: CMakeFiles/testreg2.dir/clean
+clean: CMakeFiles/bfs-map.dir/clean
+clean: CMakeFiles/KMP.dir/clean
+clean: CMakeFiles/classical.dir/clean
 
 .PHONY : clean
 
@@ -74,58 +76,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/classical.dir
+# Target rules for target CMakeFiles/dijkstra.dir
 
 # All Build rule for target.
-CMakeFiles/classical.dir/all:
-	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/depend
-	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target classical"
-.PHONY : CMakeFiles/classical.dir/all
+CMakeFiles/dijkstra.dir/all:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/depend
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target dijkstra"
+.PHONY : CMakeFiles/dijkstra.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/classical.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/classical.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/classical.dir/rule
+CMakeFiles/dijkstra.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dijkstra.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/dijkstra.dir/rule
 
 # Convenience name for target.
-classical: CMakeFiles/classical.dir/rule
+dijkstra: CMakeFiles/dijkstra.dir/rule
 
-.PHONY : classical
-
-# clean rule for target.
-CMakeFiles/classical.dir/clean:
-	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/clean
-.PHONY : CMakeFiles/classical.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/KMP.dir
-
-# All Build rule for target.
-CMakeFiles/KMP.dir/all:
-	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/depend
-	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target KMP"
-.PHONY : CMakeFiles/KMP.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/KMP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KMP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/KMP.dir/rule
-
-# Convenience name for target.
-KMP: CMakeFiles/KMP.dir/rule
-
-.PHONY : KMP
+.PHONY : dijkstra
 
 # clean rule for target.
-CMakeFiles/KMP.dir/clean:
-	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/clean
-.PHONY : CMakeFiles/KMP.dir/clean
+CMakeFiles/dijkstra.dir/clean:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/clean
+.PHONY : CMakeFiles/dijkstra.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/correct.dir
@@ -134,14 +109,14 @@ CMakeFiles/KMP.dir/clean:
 CMakeFiles/correct.dir/all:
 	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/depend
 	$(MAKE) -f CMakeFiles/correct.dir/build.make CMakeFiles/correct.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target correct"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target correct"
 .PHONY : CMakeFiles/correct.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/correct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/correct.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/correct.dir/rule
 
 # Convenience name for target.
@@ -155,31 +130,85 @@ CMakeFiles/correct.dir/clean:
 .PHONY : CMakeFiles/correct.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/testreg2.dir
+# Target rules for target CMakeFiles/bfs-map.dir
 
 # All Build rule for target.
-CMakeFiles/testreg2.dir/all:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/depend
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target testreg2"
-.PHONY : CMakeFiles/testreg2.dir/all
+CMakeFiles/bfs-map.dir/all:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/depend
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target bfs-map"
+.PHONY : CMakeFiles/bfs-map.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/testreg2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testreg2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/algorithm/classical/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/testreg2.dir/rule
+CMakeFiles/bfs-map.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bfs-map.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/bfs-map.dir/rule
 
 # Convenience name for target.
-testreg2: CMakeFiles/testreg2.dir/rule
+bfs-map: CMakeFiles/bfs-map.dir/rule
 
-.PHONY : testreg2
+.PHONY : bfs-map
 
 # clean rule for target.
-CMakeFiles/testreg2.dir/clean:
-	$(MAKE) -f CMakeFiles/testreg2.dir/build.make CMakeFiles/testreg2.dir/clean
-.PHONY : CMakeFiles/testreg2.dir/clean
+CMakeFiles/bfs-map.dir/clean:
+	$(MAKE) -f CMakeFiles/bfs-map.dir/build.make CMakeFiles/bfs-map.dir/clean
+.PHONY : CMakeFiles/bfs-map.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/KMP.dir
+
+# All Build rule for target.
+CMakeFiles/KMP.dir/all:
+	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/depend
+	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target KMP"
+.PHONY : CMakeFiles/KMP.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/KMP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KMP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/KMP.dir/rule
+
+# Convenience name for target.
+KMP: CMakeFiles/KMP.dir/rule
+
+.PHONY : KMP
+
+# clean rule for target.
+CMakeFiles/KMP.dir/clean:
+	$(MAKE) -f CMakeFiles/KMP.dir/build.make CMakeFiles/KMP.dir/clean
+.PHONY : CMakeFiles/KMP.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/classical.dir
+
+# All Build rule for target.
+CMakeFiles/classical.dir/all:
+	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/depend
+	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target classical"
+.PHONY : CMakeFiles/classical.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/classical.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/classical.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/classical.dir/rule
+
+# Convenience name for target.
+classical: CMakeFiles/classical.dir/rule
+
+.PHONY : classical
+
+# clean rule for target.
+CMakeFiles/classical.dir/clean:
+	$(MAKE) -f CMakeFiles/classical.dir/build.make CMakeFiles/classical.dir/clean
+.PHONY : CMakeFiles/classical.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
