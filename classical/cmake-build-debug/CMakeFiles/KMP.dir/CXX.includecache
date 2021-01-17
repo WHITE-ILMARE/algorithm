@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhangzheyuan/projects/github/algorithm/classical/bfs-map.cpp
+/Users/zhangzheyuan/projects/github/algorithm/classical/KMP.cpp
 iostream
 -
 string
--
-vector
--
-unordered_map
--
-sstream
 -
 

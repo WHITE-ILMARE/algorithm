@@ -49,16 +49,16 @@ void classify(unordered_map<string, int> *m, string s) {
                 indexes.push(top*temp);
                 top = indexes.top();
                 temp = 1; --i;
+            } else if (word[i] == '(') {
+                indexes.pop(); --i;
+                top = indexes.empty() ? 1 : indexes.top();
             } else if (isLow(word[i])) {
                 item = "";
                 item.push_back(word[i-1]); item.push_back(word[i]);
                 (*m)[item] += index*top*temp;
                 temp = 1;
                 --i; --i;
-            } else if (word[i] == '(') {
-                indexes.pop(); --i;
-                top = indexes.empty() ? 1 : indexes.top();
-            } else {
+            }  else {
                 string item; item.push_back(word[i]);
                 (*m)[item] += index*top*temp;
                 temp = 1; // temp代表单个元素系数，每次存储后应恢复1

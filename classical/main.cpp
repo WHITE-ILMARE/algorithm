@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <fstream>
-
+using namespace std;
 #define DEFAULT_COLOR "\033[0m"
 #define COLOR "\033[38;2;"
 #define BGCOLOR "\033[48;2;"

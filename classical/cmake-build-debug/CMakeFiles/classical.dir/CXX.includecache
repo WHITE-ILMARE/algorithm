@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhangzheyuan/projects/github/algorithm/classical/bfs-map.cpp
-iostream
+/Users/zhangzheyuan/projects/github/algorithm/classical/main.cpp
+stdio.h
 -
-string
+stdlib.h
 -
-vector
+string.h
 -
-unordered_map
+math.h
 -
-sstream
+fstream
 -
 
