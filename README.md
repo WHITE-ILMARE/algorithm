@@ -1,2 +1,0 @@
-# algorithm
-practice in algorithm

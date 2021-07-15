@@ -1,7 +1,0 @@
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/dijkstra.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/correct.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/bfs-map.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/KMP.dir
-/Users/zhangzheyuan/projects/github/algorithm/classical/cmake-build-debug/CMakeFiles/classical.dir
