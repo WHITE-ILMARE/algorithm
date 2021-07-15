@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="template" targetName="template" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="073aadce-3267-42c6-a788-f33f32f74f9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/SingleFileExecutionConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/algorithm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/.idea/CCF.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201312-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201312-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201312-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201312-4.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201403-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201403-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201403-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201409-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201409-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201409-3-kmp.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201409-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201412-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201412-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201412-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201503-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201503-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201503-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201509-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201509-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201509-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201512-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201512-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201512-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201604-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201604-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201604-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201604-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201609-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201609-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201609-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201612-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201612-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201703-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201703-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201703-3(input).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201703-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201709-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201709-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201712-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201712-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201803-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201803-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201809-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201809-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201812-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201812-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201903-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201903-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201903-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201909-1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201909-2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201909-3-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201909-3-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201909-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201912-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201912-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/201912-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/202006-1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/202006-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/202006-3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/202006-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/correct" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/solution.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/tempCodeRunnerFile.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/test-ascii.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/test-reg.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/test-reg2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCF/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAT/A1025.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAT/B1001.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAT/B1032.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAT/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAT/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/classical.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/2019-12-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/KMP.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/KMP.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/bfs-map.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/KMP.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/KMP.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/bfs-map.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/bfs-map.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/classical.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/correct.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/correct.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/dijkstra.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/dijkstra.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/CMakeFiles/testreg2.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/KMP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/bfs-map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/classical" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/classical.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/correct" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/dijkstra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/testreg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/cmake-build-debug/testreg2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/correct" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/correct.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/dijkstra.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/t.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/test-reg2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/test.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classical/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codeup/100000582/B.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codeup/100000582/test" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1vCyxtCljM1DH79HVxCs4CRRKoI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="template" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="template" TARGET_NAME="template" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="template" RUN_TARGET_NAME="template">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="073aadce-3267-42c6-a788-f33f32f74f9d" name="Default Changelist" comment="" />
+      <created>1626080615318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626080615318</updated>
+      <workItem from="1626080619205" duration="2854000" />
+      <workItem from="1626255087849" duration="1641000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
